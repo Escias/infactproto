@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>inFact</title>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript">
+        function send(){
+            var mail = document.getElementById("mail").value
+            var quest = document.getElementById("question").value
+            sendEmail(mail, quest)
+        }
+        function sendEmail(mail, quest){
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "jimmy.lai@edu.itescia.fr",
+                Password: "",
+                To: 'jimmy.lai@edu.itescia.fr',
+                From: "jimmy.lai@edu.itescia.fr",
+                Subject: "Question from "+mail,
+                Body: "mail : "+mail+" / question : "+quest,
+            })
+                .then(function (message) {
+                    alert("mail sent successfully")
+                });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1 class="title">inFact</h1>
+        <link rel="stylesheet" href="style.css"/>
+    </header>
+    <section class="sect">
+        <h2 class="fact">
+            Fact Checker
+        </h2>
+        <p class="mess">Get an answer in few year.</p>
+        <input type="text" id="mail" placeholder="Enter your email address">
+        <textarea id="question" placeholder="Enter your question" rows="5" cols="33"></textarea>
+        <a class="butt" href="">
+            <button id="send" onclick="send()">SEND</button>
+        </a>
+    </section>
+</body>
+</html>

@@ -1,0 +1,38 @@
+header{
+    background-color: black;
+}
+
+.title{
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+body{
+    /*background-color: #A5E39E*/;
+    font-family: 'ambleregular', Arial, sans-serif;
+    width: 900px;
+    margin: auto;
+}
+
+.sect{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.mess{
+    display: flex;
+    justify-content: center;
+}
+
+.fact{
+    display: flex;
+    justify-content: center;
+    font-family: Chalkduster;
+}
+
+.butt{
+    display: flex;
+    justify-content: center;
+}
